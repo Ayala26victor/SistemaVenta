@@ -4,20 +4,20 @@ package Modelo;
 public class Detalle {
     private int id;
     private int id_pro;
-    private int cantidad;
+    private int id_ventas;
     private double precio;
-    private int id_venta;
+    private int cantidad;
     
     public Detalle(){
         
     }
 
-    public Detalle(int id, int id_pro, int cantidad, double precio, int id_venta) {
+    public Detalle(int id, int id_pro, int id_ventas, double precio, int cantidad) {
         this.id = id;
         this.id_pro = id_pro;
-        this.cantidad = cantidad;
+        this.id_ventas = id_ventas;
         this.precio = precio;
-        this.id_venta = id_venta;
+        this.cantidad = cantidad;
     }
 
     public int getId() {
@@ -36,12 +36,12 @@ public class Detalle {
         this.id_pro = id_pro;
     }
 
-    public int getCantidad() {
-        return cantidad;
+    public int getId_ventas() {
+        return id_ventas;
     }
 
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
+    public void setId_ventas(int id_ventas) {
+        this.id_ventas = id_ventas;
     }
 
     public double getPrecio() {
@@ -52,11 +52,13 @@ public class Detalle {
         this.precio = precio;
     }
 
-    public int getId_venta() {
-        return id_venta;
+    public int getCantidad() {
+        return cantidad;
     }
 
-    public void setId_venta(int id_venta) {
-        this.id_venta = id_venta;
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
+
+    
 }

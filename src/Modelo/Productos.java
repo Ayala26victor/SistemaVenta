@@ -4,9 +4,9 @@ package Modelo;
 
 public class Productos {
     private int id;
-    private int id_proveedor;
     private String codigo;
     private String nombre;
+    private int proveedor;
     private String stock;
     private Double precio;
     
@@ -14,11 +14,11 @@ public class Productos {
         
     }
 
-    public Productos(int id, int id_proveedor, String codigo, String nombre, String stock, Double precio) {
+    public Productos(int id, String codigo, String nombre, int proveedor, String stock, Double precio) {
         this.id = id;
-        this.id_proveedor = id_proveedor;
         this.codigo = codigo;
         this.nombre = nombre;
+        this.proveedor = proveedor;
         this.stock = stock;
         this.precio = precio;
     }
@@ -29,14 +29,6 @@ public class Productos {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getId_proveedor() {
-        return id_proveedor;
-    }
-
-    public void setId_proveedor(int id_proveedor) {
-        this.id_proveedor = id_proveedor;
     }
 
     public String getCodigo() {
@@ -55,6 +47,14 @@ public class Productos {
         this.nombre = nombre;
     }
 
+    public int getProveedor() {
+        return proveedor;
+    }
+
+    public void setProveedor(int proveedor) {
+        this.proveedor = proveedor;
+    }
+
     public String getStock() {
         return stock;
     }
@@ -71,22 +71,15 @@ public class Productos {
         this.precio = precio;
     }
 
-    int getProveedor() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
-    void setProveedor(int aInt) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
     void setProveedorPro(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public Object getProveedorPro() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    
     
 
    

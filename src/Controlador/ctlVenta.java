@@ -72,14 +72,15 @@ public class ctlVenta {
     }
     
     public int RegistrarDetalle(Detalle Dv){
-       String sql = "INSERT INTO detalle (id_pro, cantidad, precio, id_venta) VALUES (?,?,?,?)";
+       String sql = "INSERT INTO detalle (id_pro, id_ventas, precio, cantidad) VALUES (?,?,?,?)";
         try {
             con = cn.getConexion();
             ps = con.prepareStatement(sql);
             ps.setInt(1, Dv.getId_pro());
-            ps.setInt(2, Dv.getCantidad());
+            ps.setInt(2, Dv.getId_ventas());
             ps.setDouble(3, Dv.getPrecio());
-            ps.setInt(4, Dv.getId());
+            ps.setInt(4, Dv.getCantidad());
+            ps.setInt(5, Dv.getId());
             ps.execute();
         } catch (SQLException e) {
             System.out.println(e.toString());
